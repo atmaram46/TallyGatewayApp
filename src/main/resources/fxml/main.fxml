@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="8" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alive.gateway.ui.MainController" padding="10">
+    <Label text="Tally Gateway Setup" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+    <GridPane hgap="8" vgap="8">
+        <Label text="Tally Host:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="tallyHost" GridPane.rowIndex="0" GridPane.columnIndex="1" text="http://localhost:9000"/>
+        <Label text="Tally exe path (optional):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="tallyExe" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Gateway Port:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="gatewayPort" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label text="API key:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="apiKey" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+    <HBox spacing="8">
+        <Button text="Start Gateway" onAction="#onStart"/>
+        <Button text="Stop Gateway" onAction="#onStop"/>
+    </HBox>
+    <TextArea fx:id="logArea" prefRowCount="10" wrapText="true"/>
+</VBox>

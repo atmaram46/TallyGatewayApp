@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 8089
+tally:
+  host: http://localhost:9000
+  probe-timeout-seconds: 60
+
+gateway:
+  api-key: ${APP_API_KEY:}
+
